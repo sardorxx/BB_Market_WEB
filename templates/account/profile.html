@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ profile.username }} {% endblock %}
+{% block content %}
+
+<div class="w3-container">
+
+  <div class="w3-card-4" style="width:70%">
+    <header class="w3-container w3-light-grey">
+      <h3>{{ profile.first_name }}</h3>
+    </header>
+    <div class="w3-container">
+        <style>
+            h6{
+                
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 150px;
+            font-size: 150px;
+            font-weight: 800;
+            color: transparent;
+            background-image: url("https://media.giphy.com/media/KR5Rpkiug3t5xqQnqc/giphy.gif");
+            background-position: center;
+            -webkit-background-clip: text;
+            }
+            p{
+                color: blue;
+            }
+        </style>
+        <h6>👤PROFILE👤</h6>
+        <hr>
+            <p>First Name:{{ profile.first_name }} </p>
+        <hr>
+            <p>Last Name:{{ profile.last_name }}</p>
+        <hr>
+            <p>Username:{{ profile.username }}</p>
+        <hr>
+            <p>Email:{{ profile.email }}</p>
+        <hr>
+            <p>Active:{{ profile.is_active }}</p>
+        <hr>
+            <p>Superuser:{{ profile.is_superuser }}</p>
+        <hr>
+            <p>Last login date:{{ profile.last_login|date:'Y.M.D h:i' }}</p>
+        <hr>
+            <p>Joined date:{{ profile.date_joined|date:"Y-m-d h:i" }}</p>
+        <hr>
+        <p>Password: {{ profile.password }}</p>
+        <button class="btn btn-outline-success" type="submit"><a class="nav-link" href="{% url 'account:ch_password' %}" tabindex="-1">Change password</a></button>
+
+    <hr>
+    <button class="btn btn-outline-success" type="submit"><a class="nav-link" href="{% url 'account:update_view' %}" tabindex="-1">Update</a></button>
+    </div>
+    <button class="w3-button w3-block w3-light-blue">+ Connect</button>
+  </div>
+</div>    
+
+{% endblock %}

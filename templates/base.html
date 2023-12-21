@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../static/base.css">
+</head>
+<body>
+
+<header class="header-row">
+    
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#"><h2>BB Market</h2></a>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+          Katalog
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Muddatli to'lov</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Elektronika</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Maishiy texnika</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Kiyim</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Poyabzallar</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Aksessuarlar</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Go'zallik va parvarish</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Salomatlik</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Uy-ro'zg'or buyumlari</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Qurilish va ta'mirlash</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Avtotovarlar</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Bolalar tovarlari</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Xobbi va ijod</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Sport va hordiq</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Oziq-ovqat mahsulotlari</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Maishiy kimyoviy moddala</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Kanselyariya tovarlari</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Hayvonlar uchun tovarlar</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Kitoblar</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" href="#">Dacha, bog' va tomorqa</button>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="{% url 'marketface:home' %}">Barchasi <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link active" href="#">Saralanganlar <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link active" href="#">Savat <span class="sr-only">(current)</span></a>
+            </div>
+                              <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Punkitlar
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5>         Yetkazish berish shaharini koʻrsating</h5>
+        <h6>Oʻzbekiston 72 ta shahriga ertasi kun bepul yetkazib berish</h6>
+          <form>
+                <div class="form-group row">
+                  <div class="col-sm-10">
+                      <label for="inputPassword"></label><input type="password" class="form-control" id="inputPassword" placeholder="Shaharni qidiring">
+                  </div>
+                </div>
+              
+          </form>
+          <table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Oqqo'rg'on</th>
+      <th>Olmazor(Chinoz)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Olmaliq</th>
+      <td>Angren</td>
+
+    </tr>
+    <tr>
+      <th>Andijon</th>
+      <td>Asaka</td>
+
+    </tr>
+    <tr>
+      <th>Ohongaran</th>
+      <td>Boysun</td>
+    </tr>
+    <tr>
+      <th>Bekobod</th>
+      <td>Beshariq</td>
+    </tr>
+        <tr>
+      <th>Buxoro</th>
+      <td>Denov</td>
+    </tr>
+        <tr>
+      <th>Samarqand</th>
+      <td>Bulung'ur</td>
+    </tr>
+        <tr>
+      <th>Jizzax</th>
+      <td>Usmat</td>
+    </tr>
+        <tr>
+      <th>Jondor</th>
+      <td>Zangiota</td>
+    </tr>
+        <tr>
+      <th>Chilonzor(Mirzo U)</th>
+      <td>Farg'ona</td>
+    </tr>
+        <tr>
+      <th>Chust</th>
+      <td>Boysun</td>
+    </tr>
+        <tr>
+      <th>Qora Xitoy</th>
+      <td>Yaypan</td>
+    </tr>
+        <tr>
+      <th>Yangiyo'l</th>
+      <td>Uchquduq</td>
+    </tr>
+        <tr>
+      <th>Rishton</th>
+      <td>Nuks</td>
+    </tr>
+    
+  </tbody>
+</table>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+           
+            
+            
+            
+            
+            
+            
+            
+
+              <form class="form-inline my-2 my-lg-0" method="get">
+                        <label>
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                        </label>
+{#                        {{ filter.form.as_p }}#}
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+                
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>
+                <ul class="nav justify-content-end">
+
+                {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'account:profile' %}">Profile</a>
+          </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account:logout' %}" aria-disabled="true">Sign Out</a>
+                </li>
+                    {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account:login' %}" tabindex="-1" aria-disabled="true">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'account:signup' %}" tabindex="-1" aria-disabled="true">Sign UP</a>
+                </li>
+                {% endif %}
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Savol-javob</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Buyutmalarim</a>
+          </li>
+                    
+        </ul>
+            
+        </nav>
+    <hr>
+</header>
+<style>
+    h1{
+        
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 150px;
+    font-size: 150px;
+    font-weight: 800;
+    color: transparent;
+    background-image: url("https://media.giphy.com/media/KR5Rpkiug3t5xqQnqc/giphy.gif");
+    background-position: center;
+    -webkit-background-clip: text;
+    }
+</style>
+
+{% block content %}
+    
+
+{% endblock %}
+
+
+
+
+
+
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+
+
+
+
+
+<style>
+    footer{
+        background-color: deepskyblue;
+    }
+</style>
+<footer>
+    <hr>
+<style>
+div.mycontainer {
+  width:100%;
+  overflow:auto;
+}
+div.mycontainer div {
+  width:33%;  
+  float:left;
+}
+</style>
+<div class="mycontainer">
+
+    <div>
+        <h5>Biz haqimizda</h5>
+        <p>Topshirish punkutlari</p>
+        <p>Vakansiyalar</p>
+    </div>
+    
+    <div>
+        <h5>Foydalanuvchilarga</h5>
+        <p>Biz bilan bog'lanish</p>
+        <p>Savol-javob</p>
+        <p>BB orqali soting</p>
+        <p>Sotuvchi kabineti</p>
+    </div>
+    
+    
+    <div>
+        <h5>Ilovalarni yuklash</h5>
+        <p><svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg>AppStore</p>
+        <p><svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M420.6 301.9a24 24 0 1 1 24-24 24 24 0 0 1 -24 24m-265.1 0a24 24 0 1 1 24-24 24 24 0 0 1 -24 24m273.7-144.5 47.9-83a10 10 0 1 0 -17.3-10h0l-48.5 84.1a301.3 301.3 0 0 0 -246.6 0L116.2 64.5a10 10 0 1 0 -17.3 10h0l47.9 83C64.5 202.2 8.2 285.6 0 384H576c-8.2-98.5-64.5-181.8-146.9-226.6"></path></svg>PlayMarket</p>
+        <p>BB ijtimoyi tarmoqlari</p>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="15.5" viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+        </div>
+    </div>
+
+</div>
+</footer>
+</body>
+</html>

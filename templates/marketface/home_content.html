@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>🛒BB MARKET🛒</h1>
+    <hr>
+    <div>
+    
+{#        <form method="get">#}
+{#        {{ filter.form.as_p }}#}
+{#        <button class="btn btn-outline-success" type="submit">Search</button>#}
+{#        </form>#}
+    
+        {% for product in products1 %}
+             <style>
+                .like-button {
+                    display: inline-block;
+                    padding: 8px 16px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-align: center;
+                    text-decoration: none;
+                    cursor: pointer;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    background-color: #fff;
+                    color: #333;
+                }
+                .buy-button {
+                    display: inline-block;
+                    padding: 8px 16px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-align: center;
+                    text-decoration: none;
+                    cursor: pointer;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    background-color: #fff;
+                    color: #333;
+                }
+        
+                /* Styling for the like button when it is clicked */
+                .like-button.clicked {
+                    background-color: #4CAF50; /* Green color for liked state */
+                    color: #fff;
+                }
+                .buy-button.clicked {
+                    background-color: #4CAF50; /* Green color for liked state */
+                    color: #fff;
+                }
+             </style>
+            <div class="mycontainer">
+                <div>
+                <img src= "{{ product.image.url }}">
+                    <button class="like-button" onclick="toggleLike()">💙</button>
+                     <button class="buy-button" onclick="toggleBuy()" href="#">🛒</button>
+
+                    <script>
+                        // JavaScript function to toggle the 'clicked' class
+                        function toggleLike() {
+                            var likeButton = document.querySelector('.like-button');
+                
+                            likeButton.classList.toggle('clicked');
+                
+                        }
+                        function toggleBuy() {
+                            var buyButton = document.querySelector('.buy-button');
+                            buyButton.classList.toggle('clicked');
+                        }
+                    </script>
+                <p><a href="#">{{ product.name }}</a></p>
+{#                <p>About:{{ product.more_about }}</p>#}
+{#                <p>Amount:{{ product.amount }}</p>#}
+                <p>Price:{{ product.price }} so'm</p>
+                <p>Sotuvchi:{{ product.seller }}</p>
+                <p>Size:{{ product.size }}</p>
+{#                <p>Extra:{{ product.in_product }}</p>#}
+                <p>Color:{{ product.color }}</p>
+                </div>
+            </div>
+            <hr>
+            
+
+        {% endfor %}
+    </div>
+
+<br></br/>
+<hr>
+{{ products1 }}
+<hr>
+<!--Previous: {{ products1.has_previous}}-->
+<!--Next: {{ products1.has_next}}-->
+{% if products1.has_previous %}
+    <a href="?page=1">&laquo First</a>
+    <a href="?page={{products1.previous_page_number}}">Previous</a>
+
+{% endif %}
+
+Page {{ products1.number }} of {{ products1.paginator.num_pages }}
+
+{% if products1.has_next %}
+    <a href="?page={{products1.next_page_number}}">Next</a>
+    <a href="?page={{products1.paginator.num_pages }}">Last &laquo</a>
+{% endif %}
+<hr>
+{% endblock %}
